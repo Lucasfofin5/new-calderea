@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="event-banner" class="hidden">
+        <p id="event-banner-text"></p>
+    </div>
 
     <div id="game-container">
         <div id="city-map">
-            <img src="https://lh3.googleusercontent.com/fife/ALs6j_EQe0Uoc1jeyQ0AtYWPo1X9Cpj2q0s1a1VgilMr8frXy_5JVOBmh40bcEeRE2kU02XHmsdsuuacSsyq8o2C0B2SQszIkPhFMfmBIzfFbXPmihnO-QZA08QAXLb5S70qwp93xa2ob1KDDn2HQJe6h8OJohsJp6BBjAFOSZ4S5j-X2N-c0t3gd9aR0s8m6pbxe_OhLqkc_eWkSKHcQz6Rcb7vspXvERhJ7-X4N3-9iSJ2YQmZtHEvvTMAKtrCCJn94__f1DMdtnViAp2iYJ1Gjv9OnZFNf3haIICwbmkeZ8A6iuPOW4L770qJvWKv-EBcdsEB-KGlV6BQineOUUi5TQZp_RnFSoj0vZKxjRy4B-xrFWZ8nOxiPlEGWk5xf977ZA4HoTFltP4_25rt4_bjD-8JYfXg0ASobedCxtvMC3bHF0aRmEjiDenAlypYKr_M5HYjQl6UaDpbCQrllQOiSl9ZksJ3yycWZbci3Afh5Our57-NdEke3kCmJotkdyIHuWX7bZKxffrzPJUWux_CndmAkw0c6sVU4Etr99pKFAwV0D_FEtCYsngXvp3kUgBmpJuIPulr-cSr0SDolFtvkq_V07ALvqTw590MJLAmmvEN1tLHwEQILelJ98wNVkoFM1sgNGNbi2lv7h-Zf_lQu81fa3SEr9xnHdzinnqg8gsc_-Z9HD_K6vlU59LIc7N5GQV7EuPWBLIaMDUFXLtzqZ3D4qAuZiOD5HAaz5x4bzjA95zdEokJC_jRCQhjYBmwSzbn7S_qmFersJaQN9hWvypT1TyRgmIK_QELVbKFouj61Lf0_txzi1mPqmRCc1rcLM_mF9smUEvRadAUGmbQWuYg1dGcZCcXsW8L7PlBpcY1W3LLJExC0RQpf-1C2OPc2IBhV0umPYZfk-rBEz3Hzj8oIKEHsmBzaEg0ctChUt828dvT_N6COnHKk8UETWJr6gkFzaHPG5Nq9sw3TqUMnjko1W8wZRsH6vVreUcGAIOth5fkyu0qE5tv-JWwYV_iEXYGbjTT8E5Ku8i88EUjYCltjeKYP269TyDeQpR-XxSd4P487_MkuyVLl-j_RBJyDXZhFFMKIHGOjruu-ON11xpswvYiGmws3Oo4PnKLWd4IrJeqKixlqAWuM6ecLb3QI4593ry8YPTN9C1foUMsnoxaBiptMb7o8Mr_95I-8WTNqY74Fp8jnjGfR9VzjnlSjkfZV2lWe4vDLl1v9D8wgQYh0MWL1SA2v9nJwbPuHpof2asSyi4AJL-qF8jMdKgpGjLfo7DIbRWmW-D1e7TYuOUgIjYFuqNEtY_Q0vu0F4GNaz4Uig8DknXKbtBnpJLYY8JT-UGHy9ZrvYa54JF3Erz7v2dN6NcG4MJDXBff-7FbC7sFqKAMjRCK6iMakl302U5YRaUJs-FEgIT7LjGuzQ=s1024">
+            <img src="https://storage.googleapis.com/gemini-prod/images/42f9b1f9-d81b-4299-813c-3965b35a3964" alt="Mapa da Cidade de New Caldera" class="city-image">
             </div>
 
         <div id="ui-panel">
@@ -21,6 +24,7 @@
                 <p>Influência: <span id="influence-display">👑 0</span></p>
                 <p>Calor (Polícia): <span id="heat-display">🔥 0%</span></p>
             </div>
+
             <div id="character-panel">
                 <img src="https://storage.googleapis.com/gemini-prod/images/f32b137f-3435-430c-83b0-e070d6411516" alt="O Capo" class="character-portrait">
                 <div id="mission-log">
@@ -28,23 +32,16 @@
                     <p id="mission-text">Nossa operação está apenas começando. O QG 'New Caldera' gera um fluxo constante de capital limpo. É hora de planejar nossa expansão.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div id="modal-overlay" class="hidden">
-        <div id="modal-content">
-            <h2 id="modal-title">Título do Modal</h2>
-            <div id="modal-body">
-                <p>Conteúdo do modal...</p>
-            </div>
-            <div id="modal-actions">
-                <button id="modal-action-btn">Ação</button>
-                <button id="modal-close-btn">Fechar</button>
+            <div id="specialists-panel">
+                <h4>Especialistas</h4>
+                <div id="specialists-list">
+                    <p class="no-specialists">Ninguém contratado ainda. Use sua Influência para recrutar os melhores.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="game.js"></script>
     <div id="modal-overlay" class="hidden">
         <div id="modal-content">
             <h2 id="modal-title">Título do Modal</h2>
@@ -64,7 +61,5 @@
     </div>
 
     <script src="game.js"></script>
-</body>
-</html>
 </body>
 </html>
