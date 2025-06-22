@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Caldera: Sombra e Poder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="city-map">
+            <img src="https://storage.googleapis.com/gemini-prod/images/42f9b1f9-d81b-4299-813c-3965b35a3964" alt="Mapa da Cidade de New Caldera" class="city-image">
+            <div id="new-caldera-hq" class="building" title="QG New Caldera - Seu império começa aqui."></div>
+        </div>
+
+        <div id="ui-panel">
+            <div id="resources">
+                <h3>Recursos do Império</h3>
+                <p>Dinheiro Limpo: <span id="cleanMoney-display">$ 0</span></p>
+                <p>Dinheiro Sujo: <span id="dirtyMoney-display">$ 0</span></p>
+                <p>Influência: <span id="influence-display">👑 0</span></p>
+                <p>Calor (Polícia): <span id="heat-display">🔥 0%</span></p>
+            </div>
+
+            <div id="character-panel">
+                <img src="https://storage.googleapis.com/gemini-prod/images/f32b137f-3435-430c-83b0-e070d6411516" alt="O Capo" class="character-portrait">
+                <div id="mission-log">
+                    <h4>Diário do Capo</h4>
+                    <p id="mission-text">Nossa operação está apenas começando. O QG 'New Caldera' gera um fluxo constante de capital limpo. É hora de planejar nossa expansão.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
