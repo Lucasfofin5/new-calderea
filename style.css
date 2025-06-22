@@ -1,0 +1,109 @@
+/* Importando uma fonte estilo pixel art do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    display: flex;
+    border: 4px solid #444;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+#city-map {
+    width: 70vw; /* 70% da largura da janela */
+    max-width: 1024px;
+    position: relative; /* Para posicionar prédios sobre a imagem */
+    border-right: 4px solid #444;
+}
+
+.city-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Placeholder para o prédio do QG */
+.building {
+    position: absolute;
+    width: 8%; /* Tamanho relativo ao mapa */
+    height: 15%;
+    border: 2px solid cyan;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#new-caldera-hq {
+    top: 40%; /* Posição aproximada do prédio na imagem */
+    left: 45%;
+}
+
+.building:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+
+#ui-panel {
+    width: 30vw; /* 30% da largura da janela */
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#resources h3, #character-panel h4 {
+    color: #ffc107; /* Amarelo-dourado para títulos */
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#resources p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+#character-panel {
+    margin-top: 20px;
+    border-top: 4px solid #444;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.character-portrait {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #444;
+    margin-right: 15px;
+    /* Efeito para parecer uma imagem de CRT/pixelada */
+    image-rendering: pixelated;
+}
+
+#mission-log p {
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+/* Efeito de brilho para os recursos importantes */
+#cleanMoney-display, #dirtyMoney-display {
+    color: #4CAF50; /* Verde para dinheiro */
+}
+
+#influence-display {
+    color: #2196F3; /* Azul para influência */
+}
+
+#heat-display {
+    color: #f44336; /* Vermelho para perigo */
+}
